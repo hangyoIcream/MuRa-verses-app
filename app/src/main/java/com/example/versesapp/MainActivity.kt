@@ -9,7 +9,7 @@ import com.example.versesapp.ui.VersesScreen
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val baseUrl = "https://raw.githubusercontent.com/YOURUSER/YOURREPO/main/data/json/"
+        val baseUrl = "https://raw.githubusercontent.com/hangyoIcream/MuRa-verses-app/main/data/json/"
         val repo = Repository(this, baseUrl)
 
         setContent {
