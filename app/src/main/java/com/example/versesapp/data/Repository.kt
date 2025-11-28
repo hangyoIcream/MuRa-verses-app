@@ -18,7 +18,7 @@ class Repository(private val context: Context, private val baseUrl: String) {
         cache[verseNum]?.let { return it }
         return withContext(Dispatchers.IO) {
             try {
-                val url = URL("${'$'}{baseUrl}verse_${'$'}{verseNum}.json")
+                val url = URL("${baseUrl}verse_${verseNum}.0.json")
                 val conn = url.openConnection() as HttpURLConnection
                 conn.connectTimeout = 15000
                 conn.readTimeout = 15000
