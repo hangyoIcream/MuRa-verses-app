@@ -1,11 +1,10 @@
+// C:\app\src\main\java\com\example\versesapp\model\Verse.kt
 package com.example.versesapp.model
 
-data class VerseLine(
-    val verse_number: Double?,
-    val line_number: Double?,
-    val chapter: String? = null,
-    val kannada_original: String? = null,
-    val english_transliteration: String? = null,
-    val english_translation: String? = null,
-    val tags: String? = null
+data class Verse(
+    val verseNumber: Double,
+    val chapter: String,
+    val kannadaLines: List<String>,
+    val transliterationLines: List<String>,
+    val translationLines: List<String>
 )
