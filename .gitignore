@@ -1,0 +1,35 @@
+# .gitignore
+
+# -----------------
+# Android Studio / IDE Files
+# -----------------
+.idea/
+.vscode/ # If you use VS Code
+*.iml
+*.iws
+*.ipr
+
+# -----------------
+# Gradle Files
+# -----------------
+.gradle/
+build/
+**/*.iml
+local.properties
+
+# -----------------
+# Compilation Output / APKs
+# -----------------
+**/build/
+**/bin/
+**/out/
+*.apk
+*.aab
+lint-results*
+
+# -----------------
+# Specific to Android/Kotlin
+# -----------------
+# The files inside the gradle/wrapper directory are important, 
+# but we can ignore the zip file used to download the wrapper.
+!gradle-wrapper.jar
