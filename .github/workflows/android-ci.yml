@@ -1,5 +1,3 @@
-# C:\.github\workflows\android-ci.yml
-
 name: Android Code Quality & Lint
 
 on:
@@ -23,16 +21,16 @@ jobs:
         distribution: 'temurin'
         cache: 'gradle'
 
+    # FIX: Ensure the Gradle Wrapper script is executable on the Linux runner
     - name: Grant Execute Permission for gradlew
       run: chmod +x gradlew
 
     - name: Run Android Lint Check
-      # Lint will analyze the code for potential bugs, security vulnerabilities, 
-      # and style issues across your 'app' and 'data' modules.
+      # Lint will analyze the code for potential bugs and style issues.
       run: ./gradlew lintDebug
       
-    # Optional: Upload Lint reports as artifacts for review
     - name: Upload Lint HTML Report
+      # This uploads the generated report so you can review it even if the step passes
       uses: actions/upload-artifact@v4
       with:
         name: lint-report
